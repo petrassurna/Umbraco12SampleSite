@@ -1,3 +1,5 @@
+using Umbraco.Cms.Core.Notifications;
+
 namespace Umbraco12SampleSite
 {
   public class Startup
@@ -33,6 +35,7 @@ namespace Umbraco12SampleSite
           .AddBackOffice()
           .AddWebsite()
           .AddDeliveryApi()
+          .AddNotificationHandler<UmbracoApplicationStartingNotification, Bundling>()
           .AddComposers()
           .Build();
     }
